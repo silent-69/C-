@@ -1,11 +1,8 @@
-// Binary Search in C++
-
 #include <iostream>
 using namespace std;
 
 int binarySearch(int array[], int x, int low, int high) {
-  
-	// Repeat until the pointers low and high meet each other
+ 
   while (low <= high) {
     int mid = low + (high - low) / 2;
 
@@ -23,9 +20,10 @@ int binarySearch(int array[], int x, int low, int high) {
 }
 
 int main(void) {
-  int array[] = {3, 4, 5, 6, 7, 8, 9};
-  int x = 4;
-  int n = sizeof(array) / sizeof(array[0]);
+  int n;
+  cin>>n;
+  int array[n];
+  for(int i=0;i<n;i++) cin>>array[i];
   int result = binarySearch(array, x, 0, n - 1);
   if (result == -1)
     printf("Not found");
